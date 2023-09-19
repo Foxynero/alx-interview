@@ -2,6 +2,7 @@
 """Making change O(n)"""
 
 def makeChange(coins, total):
+    
     """Clasic Bottom-Up dynamic programming"""
     temp_value = 0
     coins.sort(reverse=True)
@@ -15,6 +16,7 @@ def makeChange(coins, total):
             total = total % coin
 
     return temp_value if total == 0 else -1
+
 
 if __name__ == '__main__':
 
